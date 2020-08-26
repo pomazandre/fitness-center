@@ -1,0 +1,53 @@
+<h1>Польза фитнеса</h1>
+<img align="left" src="assets/fitness_5.jpg" hspace="20">
+<p>Занятия фитнесом дают возможность поддерживать отличную физическую форму и укрепить тело.
+  Во время занятия фитнесом дыхание становится более глубоким, благодаря чему кровь лучше насыщается кислородом.
+  Знятия фитнесом помогают бороться с негативными психологическими и психическими явлениями и люди, выполняющие
+  упражнения,
+  гораздо быстрее выходят из состояния депрессии.
+  Групповые занятия в большинстве случаев являются дополнительной мотивацией,
+  ведь работа в команде стимулирует выкладываться в полную силу.
+  Кроме того, для людей, склонных к лидерству, желание получить лучшие результаты станет мощным стимулом к
+  фитнес-тренировкам.</p>
+<h2> Давайте мы подберем Вам абонемент и скажем его стоимость </h2>
+<div class="ui-g-12"><b>Тип абоменента</b>
+</div>
+<div class="ui-g" style="width:700px;margin-bottom:5px">
+  <div class="ui-g-12">
+    <p-radioButton name="group1" value="Standart" label="Стандартный" [(ngModel)]="mdlType" inputId="opt1">
+    </p-radioButton>
+  </div>
+  <div class="ui-g-12">
+    <p-radioButton name="group1" value="Special" label="Специальный*" [(ngModel)]="mdlType" inputId="opt2">
+    </p-radioButton>
+  </div>
+  * женщины 55+, мужчины 60+, лица с ограниченными возможностями, многодетные семьи
+</div>
+
+<div class="ui-g-12"><b>Число занятий</b>
+</div>
+<div class="ui-g" style="width:250px;margin-bottom:5px">
+  <div class="ui-g-12">
+    <p-radioButton name="group2" value="0" label="4 занятия (на 30 дней)" [(ngModel)]="mdlTime" inputId="opt3">
+    </p-radioButton>
+  </div>
+  <div class="ui-g-12">
+    <p-radioButton name="group2" value="1" label="4 занятия (на 30 дней)" [(ngModel)]="mdlTime" inputId="opt3">
+    </p-radioButton>
+  </div>
+  <div class="ui-g-12">
+    <p-radioButton name="group2" value="2" label="12 занятий (на 60 дней)" [(ngModel)]="mdlTime" inputId="opt4">
+    </p-radioButton>
+  </div>
+  <div class="ui-g-12">
+    <p-radioButton name="group2" value="3" label="24 занятия (на 90 дней)" [(ngModel)]="mdlTime" inputId="opt5">
+    </p-radioButton>
+  </div>
+  <div class="ui-g-12"></div>
+  <div class="ui-g-12">
+    <button pButton type="button" label="Подбор >>" class="ui-button-rounded" (click)="handleClick()"></button>
+  </div>
+  <div class="ui-g-12" *ngIf="mdlDisplayPrice">
+    <font color="blue"><b>Стоимость абонемента {{mdlCost}} руб.</b></font>
+  </div>
+</div>
